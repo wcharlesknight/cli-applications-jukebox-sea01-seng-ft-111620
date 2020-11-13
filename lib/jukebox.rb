@@ -50,25 +50,26 @@ def exit_jukebox
   puts "Goodbye"
 end 
 
-def run(songs)
-  input = ""
-  while input != "exit" do
-    puts "Please enter a command:"
-    input = gets.strip
+def run(song_array)
+  input = nil 
+  while input != "exit" do 
+    puts "Please enter command:"
+    input = gets.strip 
     
     case input
     when "list"
-      list(songs)
-    when "play"
-      play(songs)
+      list(song_array)
     when "help"
-      help
+      help 
+    when "play"
+      play(song_array)
     when "exit"
       exit_jukebox
     else
-      help
+      puts "not a command"
     end
-  end
-end
+  end 
+end 
+
 
 
