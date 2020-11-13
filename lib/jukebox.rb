@@ -66,7 +66,7 @@ def run(song_array)
     when "exit"
       exit_jukebox
     else
-      puts "not a command"
+      help 
     end
   end 
 end 
